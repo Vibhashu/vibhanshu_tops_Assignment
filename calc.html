@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        div
+        {
+            border: 2px solid black;
+            height: 200px;
+            width: 400px;
+            padding: 30px;
+        }
+        h5{
+            display: inline;
+        }
+    </style>
+  </head>
+  <body>
+   <div>
+    <h4>Math Operation</h4>
+    Enter 1st number : <input type="text" id="n1" /> <br /><br />
+    Enter 2nd number : <input type="text" id="n2" /> <br /><br />
+
+    <button onclick="result1(b1)" id="b1">+</button>
+    <button onclick="result1(b2)" id="b2">-</button>
+    <button onclick="result1(b3)" id="b3">*</button>
+    <button onclick="result1(b4)" id="b4">/</button>
+    <button onclick="result1(b5)" id="b5">%</button>                Answer is : <h5 id="result"></h5>
+
+           
+   </div>
+
+    <script>
+     
+
+      num1 = document.getElementById("n1");
+      num2 = document.getElementById("n2");
+      result = document.getElementById("result");
+
+      
+
+      function result1(x)
+      {
+
+    if(x.innerHTML == "+")
+    {
+        result.innerHTML = Number(num1.value) + Number(num2.value);
+    }
+
+    else if(x.innerHTML == "-")
+    {
+        result.innerHTML = Number(num1.value) - Number(num2.value);
+    }
+    else if(x.innerHTML == "*")
+    {
+        result.innerHTML = Number(num1.value) * Number(num2.value);
+    }
+    else if(x.innerHTML == "/")
+    {
+        result.innerHTML = Number(num1.value) / Number(num2.value);
+    }
+    else if(x.innerHTML == "%")
+    {
+        result.innerHTML = Number(num1.value) % Number(num2.value);
+    }
+      }
+
+    </script>
+  </body>
+</html>
